@@ -6,18 +6,18 @@ public class ClosetStatePattern {
 		
 		Context context = new Context();
 		
-		OpenStatus openStatus = new OpenStatus();
-		openStatus.doAction(context);
+		OpenState openState = new OpenState();
+		CloseState closeState = new CloseState();
 		
-		System.out.println(context.getStatus().toString() + "\n");
+		openState.bedroom(context);
+		openState.garageRoom(context);
+		openState.laundryRoom();
+		
+		closeState.bedroom(context);
+		closeState.garageRoom(context);
+		closeState.laundryRoom();
 		
 		
-		CloseStatus closedStatus = new CloseStatus();
-		closedStatus.doAction(context);
-		
-
-		System.out.println(context.getStatus().toString());
-
 	}
 
 }

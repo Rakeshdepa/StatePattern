@@ -2,17 +2,17 @@ package com.closets.buildMethod;
 
 public class Context {
 	
-	private Status status;
+	private ClosetState status;
 	
 	public Context() {
 		status = null;
 	}
 
-	public Status getStatus() {
+	public ClosetState getStatus() {
 		return status;
 	}
 
-	public void setStatus(Status status) {
+	public void setStatus(ClosetState status) {
 		this.status = status;
 	}
 
