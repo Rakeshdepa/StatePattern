@@ -4,19 +4,19 @@ public class ClosetStatePattern {
 
 	public static void main(String[] args) {
 		
-		Context context = new Context();
+		ClosetBuilder supplyCloset = new SupplyCloset();
+		Closet closet = supplyCloset.fixDoors().fixDryWallScrews().construct();
+		closet.addDrywall();
+		closet.addStuds();
+		closet.addWallFraming();		
 		
-		OpenState openState = new OpenState();
-		CloseState closeState = new CloseState();
 		
-		openState.bedroom(context);
-		openState.garageRoom(context);
-		openState.laundryRoom();
-		
-		closeState.bedroom(context);
-		closeState.garageRoom(context);
-		closeState.laundryRoom();
-		
+		System.out.println("");
+		ClosetContext context = new ClosetContext();
+		context.open();
+		context.close();
+		context.broken();
+		context.fixed();
 		
 	}
 
